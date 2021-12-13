@@ -30,8 +30,9 @@ import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.debounce
 
 /**
- * 收集Flow结果并过滤重复结果
+ * 收集Flow结果
  */
+@Deprecated("规范命名", ReplaceWith("launchIn"), DeprecationLevel.ERROR)
 @OptIn(InternalCoroutinesApi::class)
 inline fun <T> Flow<T>.listen(
     owner: LifecycleOwner? = null,
